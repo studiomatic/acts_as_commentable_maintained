@@ -59,25 +59,7 @@ Style/Documentation:
     - 'lib/generators/comment/templates/create_comments.rb'
 
 # Offense count: 1
-# Cop supports --auto-correct.
-Style/Encoding:
-  Exclude:
-    - 'acts_as_commentable.gemspec'
-
-# Offense count: 1
 Style/EvalWithLocation:
-  Exclude:
-    - 'lib/commentable_methods.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/MultilineIfThen:
-  Exclude:
-    - 'acts_as_commentable.gemspec'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/Proc:
   Exclude:
     - 'lib/commentable_methods.rb'
 

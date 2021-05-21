@@ -1,5 +1,3 @@
-# -*- encoding: utf-8 -*-
-
 Gem::Specification.new do |s|
   s.name = 'acts_as_commentable'
   s.version = '5.0.0'
