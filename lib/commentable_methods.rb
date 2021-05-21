@@ -12,6 +12,8 @@ module Juixe
       module HelperMethods
         private
         def define_role_based_inflection(role)
+          return if self.method_defined?("#{role.to_s}_comments".to_sym)
+
           send("define_role_based_inflection_#{ActiveRecord::VERSION::MAJOR}", role)
         end
 
@@ -45,6 +47,9 @@ module Juixe
         include HelperMethods
 
         def acts_as_commentable(*args)
+          # Detect if we already loaded
+          return if self.method_defined?(:comment_types)
+
           options = args.to_a.flatten.compact.partition{ |opt| opt.kind_of? Hash }
           comment_roles = options.last.blank? ? nil : options.last.flatten.compact.map(&:to_sym)
 
@@ -66,6 +71,7 @@ module Juixe
 
           comment_types.each do |role|
             method_name = (role == :comments ? "comments" : "#{role.to_s}_comments").to_s
+
             class_eval %{
               def self.find_#{method_name}_for(obj)
                 commentable = self.base_class.name

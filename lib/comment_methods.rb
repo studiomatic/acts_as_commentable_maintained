@@ -8,6 +8,8 @@ module ActsAsCommentable
   module Comment
 
     def self.included(comment_model)
+      # If you have already extended the comment model, stop
+      return if comment_model.method_defined?(:in_order)
       comment_model.extend Finders
       comment_model.scope :in_order, -> { comment_model.order('created_at ASC') }
       comment_model.scope :recent, -> { comment_model.reorder('created_at DESC') }
