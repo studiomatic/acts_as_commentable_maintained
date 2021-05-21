@@ -171,12 +171,6 @@ Style/Proc:
   Exclude:
     - 'lib/commentable_methods.rb'
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/RedundantSelf:
-  Exclude:
-    - 'lib/commentable_methods.rb'
-
 # Offense count: 127
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.

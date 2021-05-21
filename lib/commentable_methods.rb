@@ -12,7 +12,7 @@ module Juixe
         private
 
         def define_role_based_inflection(role)
-          return if self.method_defined?("#{role.to_s}_comments".to_sym)
+          return if method_defined?("#{role.to_s}_comments".to_sym)
 
           has_many "#{role.to_s}_comments".to_sym,
                    -> { where(role: role.to_s) },
@@ -33,7 +33,7 @@ module Juixe
 
         def acts_as_commentable(*args)
           # Detect if we already loaded
-          return if self.method_defined?(:comment_types)
+          return if method_defined?(:comment_types)
 
           options = args.to_a.flatten.compact.partition { |opt| opt.kind_of? Hash }
           comment_roles = options.last.blank? ? nil : options.last.flatten.compact.map(&:to_sym)
