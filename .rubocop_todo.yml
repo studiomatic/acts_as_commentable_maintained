@@ -57,12 +57,6 @@ Lint/UnusedMethodArgument:
   Exclude:
     - 'lib/generators/comment/comment_generator.rb'
 
-# Offense count: 2
-Lint/UselessAssignment:
-  Exclude:
-    - 'acts_as_commentable.gemspec'
-    - 'test/acts_as_commentable_test.rb'
-
 # Offense count: 7
 Metrics/AbcSize:
   Max: 42

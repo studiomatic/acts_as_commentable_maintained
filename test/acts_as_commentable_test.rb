@@ -73,7 +73,7 @@ class ActsAsCommentableTest < Test::Unit::TestCase
 
   def test_find_commentable
     post = Post.create(text: 'Awesome post !')
-    comment = post.comments.create(title: 'First comment.', comment: 'This is the first comment.')
+    post.comments.create(title: 'First comment.', comment: 'This is the first comment.')
     assert_equal post, Comment.find_commentable(post.class.name, post.id)
   end
 

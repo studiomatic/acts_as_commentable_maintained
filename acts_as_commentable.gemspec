@@ -19,8 +19,5 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'activerecord', '~> 5.0'
 
-  if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
-    s.specification_version = 3
-  end
+  s.specification_version = 3 if s.respond_to? :specification_version
 end
