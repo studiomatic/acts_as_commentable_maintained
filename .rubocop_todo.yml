@@ -26,55 +26,11 @@ Layout/AlignHash:
 
 # Offense count: 1
 # Cop supports --auto-correct.
-Layout/LeadingCommentSpace:
-  Exclude:
-    - 'lib/generators/comment/templates/comment.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: symmetrical, new_line, same_line
 Layout/MultilineHashBraceLayout:
   Exclude:
     - 'lib/commentable_methods.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces.
-# SupportedStyles: space, no_space
-# SupportedStylesForEmptyBraces: space, no_space
-Layout/SpaceBeforeBlockBraces:
-  Exclude:
-    - 'lib/commentable_methods.rb'
-
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces.
-# SupportedStyles: space, no_space, compact
-# SupportedStylesForEmptyBraces: space, no_space
-Layout/SpaceInsideHashLiteralBraces:
-  Exclude:
-    - 'lib/commentable_methods.rb'
-
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: final_newline, final_blank_line
-Layout/TrailingBlankLines:
-  Exclude:
-    - 'init.rb'
-    - 'install.rb'
-    - 'rails/init.rb'
-
-# Offense count: 8
-# Cop supports --auto-correct.
-# Configuration parameters: AllowInHeredoc.
-Layout/TrailingWhitespace:
-  Exclude:
-    - 'lib/comment_methods.rb'
-    - 'lib/generators/comment/templates/comment.rb'
-    - 'lib/generators/comment/templates/create_comments.rb'
-    - 'test/acts_as_commentable_test.rb'
 
 # Offense count: 1
 Lint/DuplicatedKey:

@@ -8,7 +8,7 @@ ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":me
 
 class ActsAsCommentableTest < Test::Unit::TestCase
   def setup_comments
-    require File.expand_path(File.dirname(__FILE__) + '/../lib/generators/comment/templates/create_comments') 
+    require File.expand_path(File.dirname(__FILE__) + '/../lib/generators/comment/templates/create_comments')
     CreateComments.up
     load(File.expand_path(File.dirname(__FILE__) + '/../lib/generators/comment/templates/comment.rb'))
   end
@@ -58,11 +58,11 @@ class ActsAsCommentableTest < Test::Unit::TestCase
 
   def test_find_comments_by_user
     user = User.create(:name => "Mike")
-    user2 = User.create(:name => "Fake") 
+    user2 = User.create(:name => "Fake")
     post = Post.create(:text => "Awesome post !")
     comment = post.comments.create(:title => "First comment.", :comment => "This is the first comment.", :user => user)
     assert_equal true, Post.find_comments_by_user(user).include?(comment)
-    assert_equal false, Post.find_comments_by_user(user2).include?(comment) 
+    assert_equal false, Post.find_comments_by_user(user2).include?(comment)
   end
 
   def test_find_comments_for_commentable
@@ -74,7 +74,7 @@ class ActsAsCommentableTest < Test::Unit::TestCase
   def test_find_commentable
     post = Post.create(:text => "Awesome post !")
     comment = post.comments.create(:title => "First comment.", :comment => "This is the first comment.")
-    assert_equal post, Comment.find_commentable(post.class.name, post.id) 
+    assert_equal post, Comment.find_commentable(post.class.name, post.id)
   end
 
   def test_find_comments_for

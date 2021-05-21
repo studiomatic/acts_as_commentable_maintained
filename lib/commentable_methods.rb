@@ -20,7 +20,7 @@ module Juixe
         end
 
         def has_many_options(role)
-          {:class_name => "Comment",
+          { :class_name => "Comment",
                   :as => :commentable,
                   :dependent => :destroy,
                   :before_add => Proc.new { |x, c| c.role = role.to_s }
@@ -35,7 +35,7 @@ module Juixe
           # Detect if we already loaded
           return if self.method_defined?(:comment_types)
 
-          options = args.to_a.flatten.compact.partition{ |opt| opt.kind_of? Hash }
+          options = args.to_a.flatten.compact.partition { |opt| opt.kind_of? Hash }
           comment_roles = options.last.blank? ? nil : options.last.flatten.compact.map(&:to_sym)
 
           join_options = options.first.blank? ? [{}] : options.first
@@ -51,7 +51,7 @@ module Juixe
             end
             has_many :all_comments, **{ :as => :commentable, :dependent => :destroy, class_name: 'Comment' }.merge(join_options)
           else
-            has_many :comments, **{:as => :commentable, :dependent => :destroy}.merge(join_options)
+            has_many :comments, **{ :as => :commentable, :dependent => :destroy }.merge(join_options)
           end
 
           comment_types.each do |role|
