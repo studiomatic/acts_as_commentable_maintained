@@ -37,7 +37,7 @@ class ActsAsCommentableTest < Test::Unit::TestCase
     assert_not_nil wall.public_comments.create(title: 'comment.', comment: 'This is the a comment.').id
     assert_not_nil wall.private_comments.create(title: 'comment.', comment: 'This is the a comment.').id
     assert_raise NoMethodError do
-      wall.comments.create(title: 'Comment', title: 'Title')
+      wall.comments.create(comment: 'Comment', title: 'Title')
     end
   end
 
