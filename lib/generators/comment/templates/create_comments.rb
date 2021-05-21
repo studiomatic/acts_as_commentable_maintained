@@ -11,7 +11,7 @@ class CreateComments < ActiveRecord::Migration
 
     add_index :comments, :commentable_type
     add_index :comments, :commentable_id
-    add_index :comments, :user_id
+    add_index :comments, :user_id unless index_exists?(:comments, :user_id)
   end
 
   def self.down
