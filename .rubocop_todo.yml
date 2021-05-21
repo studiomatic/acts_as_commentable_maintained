@@ -12,12 +12,6 @@ Lint/DuplicatedKey:
     - 'test/acts_as_commentable_test.rb'
 
 # Offense count: 7
-# Cop supports --auto-correct.
-Lint/StringConversionInInterpolation:
-  Exclude:
-    - 'lib/commentable_methods.rb'
-
-# Offense count: 7
 Metrics/AbcSize:
   Max: 42
 

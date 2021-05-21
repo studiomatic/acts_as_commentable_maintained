@@ -12,9 +12,9 @@ module Juixe
         private
 
         def define_role_based_inflection(role)
-          return if method_defined?("#{role.to_s}_comments".to_sym)
+          return if method_defined?("#{role}_comments".to_sym)
 
-          has_many "#{role.to_s}_comments".to_sym,
+          has_many "#{role}_comments".to_sym,
                    -> { where(role: role.to_s) },
                    **has_many_options(role)
         end
@@ -54,25 +54,25 @@ module Juixe
           end
 
           comment_types.each do |role|
-            method_name = (role == :comments ? 'comments' : "#{role.to_s}_comments").to_s
+            method_name = (role == :comments ? 'comments' : "#{role}_comments").to_s
 
             class_eval %{
               def self.find_#{method_name}_for(obj)
                 commentable = self.base_class.name
-                Comment.find_comments_for_commentable(commentable, obj.id, "#{role.to_s}")
+                Comment.find_comments_for_commentable(commentable, obj.id, "#{role}")
               end
 
               def self.find_#{method_name}_by_user(user)
                 commentable = self.base_class.name
-                Comment.where(["user_id = ? and commentable_type = ? and role = ?", user.id, commentable, "#{role.to_s}"]).order("created_at DESC")
+                Comment.where(["user_id = ? and commentable_type = ? and role = ?", user.id, commentable, "#{role}"]).order("created_at DESC")
               end
 
               def #{method_name}_ordered_by_submitted
-                Comment.find_comments_for_commentable(self.class.name, id, "#{role.to_s}").order("created_at")
+                Comment.find_comments_for_commentable(self.class.name, id, "#{role}").order("created_at")
               end
 
               def add_#{method_name.singularize}(comment)
-                comment.role = "#{role.to_s}"
+                comment.role = "#{role}"
                 #{method_name} << comment
               end
             }
