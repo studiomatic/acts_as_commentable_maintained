@@ -21,10 +21,9 @@ module Juixe
 
         def has_many_options(role)
           { class_name: 'Comment',
-                  as: :commentable,
-                  dependent: :destroy,
-                  before_add: Proc.new { |_x, c| c.role = role.to_s }
-          }
+            as: :commentable,
+            dependent: :destroy,
+            before_add: Proc.new { |_x, c| c.role = role.to_s } }
         end
       end
 
