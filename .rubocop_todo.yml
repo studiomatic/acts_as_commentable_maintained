@@ -136,12 +136,6 @@ Style/EvalWithLocation:
 
 # Offense count: 1
 # Cop supports --auto-correct.
-Style/ExpandPathArguments:
-  Exclude:
-    - 'lib/generators/comment/comment_generator.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
 Style/MultilineIfThen:
   Exclude:
     - 'acts_as_commentable.gemspec'
