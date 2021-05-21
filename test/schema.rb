@@ -11,5 +11,4 @@ ActiveRecord::Schema.define(:version => 0) do
   create_table :walls do |w|
     w.string :name
   end
-
 end

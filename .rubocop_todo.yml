@@ -26,50 +26,6 @@ Layout/AlignHash:
 
 # Offense count: 1
 # Cop supports --auto-correct.
-Layout/EmptyLineAfterGuardClause:
-  Exclude:
-    - 'lib/comment_methods.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Layout/EmptyLines:
-  Exclude:
-    - 'acts_as_commentable.gemspec'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Layout/EmptyLinesAroundAccessModifier:
-  Exclude:
-    - 'lib/commentable_methods.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: empty_lines, no_empty_lines
-Layout/EmptyLinesAroundBlockBody:
-  Exclude:
-    - 'test/schema.rb'
-
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines, beginning_only, ending_only
-Layout/EmptyLinesAroundClassBody:
-  Exclude:
-    - 'lib/generators/comment/templates/comment.rb'
-    - 'test/acts_as_commentable_test.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines
-Layout/EmptyLinesAroundModuleBody:
-  Exclude:
-    - 'lib/comment_methods.rb'
-    - 'lib/commentable_methods.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
 Layout/LeadingCommentSpace:
   Exclude:
     - 'lib/generators/comment/templates/comment.rb'

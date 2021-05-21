@@ -1,5 +1,4 @@
 class Comment < ActiveRecord::Base
-
   unless method_defined?(:commentable)
     include ActsAsCommentable::Comment
   

@@ -7,7 +7,6 @@ ActiveRecord::Migration.verbose = false
 ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":memory:")
 
 class ActsAsCommentableTest < Test::Unit::TestCase
-
   def setup_comments
     require File.expand_path(File.dirname(__FILE__) + '/../lib/generators/comment/templates/create_comments') 
     CreateComments.up
@@ -169,5 +168,4 @@ class ActsAsCommentableTest < Test::Unit::TestCase
     assert_equal true, public_comment.is_comment_type?(:public)
     assert_equal false, public_comment.is_comment_type?(:comment)
   end
-
 end

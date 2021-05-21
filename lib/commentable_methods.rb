@@ -4,13 +4,13 @@ require 'active_record'
 module Juixe
   module Acts #:nodoc:
     module Commentable #:nodoc:
-
       def self.included(base)
         base.extend ClassMethods
       end
 
       module HelperMethods
         private
+
         def define_role_based_inflection(role)
           return if self.method_defined?("#{role.to_s}_comments".to_sym)
 

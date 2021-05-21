@@ -17,7 +17,6 @@ Gem::Specification.new do |s|
   s.summary = %q{Plugin/gem that provides comment functionality}
   s.license = 'MIT'
 
-
   s.add_runtime_dependency 'activerecord', '~> 5.0'
 
   if s.respond_to? :specification_version then
