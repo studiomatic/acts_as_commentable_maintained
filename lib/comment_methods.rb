@@ -11,8 +11,8 @@ module ActsAsCommentable
       return if comment_model.method_defined?(:in_order)
 
       comment_model.extend Finders
-      comment_model.scope :in_order, -> { self.order('created_at ASC') }
-      comment_model.scope :recent, -> { self.reorder('created_at DESC') }
+      comment_model.scope :in_order, -> { order('created_at ASC') }
+      comment_model.scope :recent, -> { reorder('created_at DESC') }
     end
 
     def is_comment_type?(type)
