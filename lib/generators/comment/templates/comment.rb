@@ -2,7 +2,7 @@ class Comment < ActiveRecord::Base
   unless method_defined?(:commentable)
     include ActsAsCommentable::Comment
 
-    belongs_to :commentable, :polymorphic => true
+    belongs_to :commentable, polymorphic: true
 
     default_scope -> { order('created_at ASC') }
 

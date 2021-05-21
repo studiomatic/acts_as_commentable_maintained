@@ -140,18 +140,6 @@ Style/ExpandPathArguments:
   Exclude:
     - 'lib/generators/comment/comment_generator.rb'
 
-# Offense count: 110
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, UseHashRocketsWithSymbolValues, PreferHashRocketsForNonAlnumEndingSymbols.
-# SupportedStyles: ruby19, hash_rockets, no_mixed_keys, ruby19_no_mixed_keys
-Style/HashSyntax:
-  Exclude:
-    - 'lib/commentable_methods.rb'
-    - 'lib/generators/comment/templates/comment.rb'
-    - 'lib/generators/comment/templates/create_comments.rb'
-    - 'test/acts_as_commentable_test.rb'
-    - 'test/schema.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 Style/MultilineIfThen:
