@@ -20,7 +20,7 @@ module Juixe
         end
 
         def has_many_options(role)
-          { class_name: "Comment",
+          { class_name: 'Comment',
                   as: :commentable,
                   dependent: :destroy,
                   before_add: Proc.new { |x, c| c.role = role.to_s }
@@ -55,7 +55,7 @@ module Juixe
           end
 
           comment_types.each do |role|
-            method_name = (role == :comments ? "comments" : "#{role.to_s}_comments").to_s
+            method_name = (role == :comments ? 'comments' : "#{role.to_s}_comments").to_s
 
             class_eval %{
               def self.find_#{method_name}_for(obj)

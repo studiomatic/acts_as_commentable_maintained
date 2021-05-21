@@ -1,11 +1,11 @@
-class CreateComments < ActiveRecord::Migration[[ActiveRecord::VERSION::MAJOR, ActiveRecord::VERSION::MINOR].join(".")]
+class CreateComments < ActiveRecord::Migration[[ActiveRecord::VERSION::MAJOR, ActiveRecord::VERSION::MINOR].join('.')]
   def self.up
     create_table :comments do |t|
-      t.string :title, limit: 50, default: ""
+      t.string :title, limit: 50, default: ''
       t.text :comment
       t.references :commentable, polymorphic: true
       t.references :user
-      t.string :role, default: "comments"
+      t.string :role, default: 'comments'
       t.timestamps
     end
 

@@ -152,20 +152,6 @@ Style/Proc:
   Exclude:
     - 'lib/commentable_methods.rb'
 
-# Offense count: 127
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Exclude:
-    - 'acts_as_commentable.gemspec'
-    - 'install.rb'
-    - 'lib/comment_methods.rb'
-    - 'lib/commentable_methods.rb'
-    - 'lib/generators/comment/comment_generator.rb'
-    - 'lib/generators/comment/templates/create_comments.rb'
-    - 'test/acts_as_commentable_test.rb'
-
 # Offense count: 63
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
