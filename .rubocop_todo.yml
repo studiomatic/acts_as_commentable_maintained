@@ -158,13 +158,6 @@ Style/MultilineIfThen:
   Exclude:
     - 'acts_as_commentable.gemspec'
 
-# Offense count: 7
-# Cop supports --auto-correct.
-# Configuration parameters: PreferredDelimiters.
-Style/PercentLiteralDelimiters:
-  Exclude:
-    - 'acts_as_commentable.gemspec'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 Style/Proc:
@@ -184,12 +177,6 @@ Style/StringLiterals:
     - 'lib/generators/comment/comment_generator.rb'
     - 'lib/generators/comment/templates/create_comments.rb'
     - 'test/acts_as_commentable_test.rb'
-
-# Offense count: 7
-# Cop supports --auto-correct.
-Style/UnneededPercentQ:
-  Exclude:
-    - 'acts_as_commentable.gemspec'
 
 # Offense count: 63
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
