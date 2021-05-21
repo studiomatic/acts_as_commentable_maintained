@@ -35,7 +35,7 @@ module Juixe
           # Detect if we already loaded
           return if method_defined?(:comment_types)
 
-          options = args.to_a.flatten.compact.partition { |opt| opt.kind_of? Hash }
+          options = args.to_a.flatten.compact.partition { |opt| opt.is_a? Hash }
           comment_roles = options.last.blank? ? nil : options.last.flatten.compact.map(&:to_sym)
 
           join_options = options.first.blank? ? [{}] : options.first
