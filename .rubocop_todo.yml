@@ -43,20 +43,6 @@ Lint/StringConversionInInterpolation:
   Exclude:
     - 'lib/commentable_methods.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoreEmptyBlocks, AllowUnusedKeywordArguments.
-Lint/UnusedBlockArgument:
-  Exclude:
-    - 'lib/commentable_methods.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
-Lint/UnusedMethodArgument:
-  Exclude:
-    - 'lib/generators/comment/comment_generator.rb'
-
 # Offense count: 7
 Metrics/AbcSize:
   Max: 42

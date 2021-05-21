@@ -23,7 +23,7 @@ module Juixe
           { class_name: 'Comment',
                   as: :commentable,
                   dependent: :destroy,
-                  before_add: Proc.new { |x, c| c.role = role.to_s }
+                  before_add: Proc.new { |_x, c| c.role = role.to_s }
           }
         end
       end
