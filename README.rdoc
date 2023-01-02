@@ -1,5 +1,7 @@
 = Acts As Commentable
 
+A maintained fork of the original acts_as_commentable gem.
+
 Provides a single Comment model that can be attached to any model(s) within your app. It creates
 a Comment model and handles the plumbing between that model and any models that you declare to be
 commentable models.
@@ -9,17 +11,7 @@ commentable models.
 
 Add the following line to your Gemfile
 
-=== Rails 4
-
-  gem 'acts_as_commentable'
-
-=== Rails 3
-
-  gem 'acts_as_commentable', '3.0.1'
-
-=== Rails 2
-
-  gem 'acts_as_commentable', git: 'git@github.com:jackdempsey/acts_as_commentable.git', branch: '2.x'
+  gem 'acts_as_commentable', git: 'git@github.com:fatfreecrm/acts_as_commentable.git'
 
  
 == Generator
@@ -28,10 +20,6 @@ Add the following line to your Gemfile
 === Rails 3+
 
   rails g comment
-
-=== Rails 2
-  
-  script/generate comment
 
 Then migrate your database to add the comments model:
 
